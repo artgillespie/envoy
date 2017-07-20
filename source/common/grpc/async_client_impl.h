@@ -20,9 +20,8 @@ template <class RequestType, class ResponseType> class AsyncRequestImpl;
 template <class RequestType, class ResponseType>
 class AsyncClientImpl final : public AsyncClient<RequestType, ResponseType> {
 public:
-  AsyncClientImpl(Upstream::ClusterManager& cm, Event::Dispatcher& dispatcher,
-                  const std::string& remote_cluster_name)
-      : cm_(cm), dispatcher_(dispatcher), remote_cluster_name_(remote_cluster_name) {}
+  AsyncClientImpl(Upstream::ClusterManager& cm, const std::string& remote_cluster_name)
+      : cm_(cm), remote_cluster_name_(remote_cluster_name) {}
 
   ~AsyncClientImpl() override {
     while (!active_streams_.empty()) {
@@ -65,7 +64,6 @@ public:
 
 private:
   Upstream::ClusterManager& cm_;
-  Event::Dispatcher& dispatcher_;
   const std::string remote_cluster_name_;
   std::list<std::unique_ptr<AsyncStreamImpl<RequestType, ResponseType>>> active_streams_;
 
