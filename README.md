@@ -21,7 +21,7 @@ to find out more about the origin story and design philosophy of Envoy.
   questions is best effort on Gitter. For a "guaranteed" response please email envoy-users@ per the
   guidance in the following linked thread)
 
-Please see [this](https://groups.google.com/forum/#!topic/envoy-announce/l9zjYsnS3TY) email thread 
+Please see [this](https://groups.google.com/forum/#!topic/envoy-announce/l9zjYsnS3TY) email thread
 for information on email list usage.
 
 ## Reporting security vulnerabilities
@@ -30,4 +30,4 @@ If you've found a vulnerability or a potential vulnerability in Envoy please let
 security@lyft.com. We'll send a confirmation email to acknowledge your report, and we'll send an
 additional email when we've identified the issue positively or negatively.
 
-
+## I'm Going to add to the docs!
